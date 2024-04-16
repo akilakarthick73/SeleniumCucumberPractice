@@ -1,15 +1,8 @@
 package stepDefinitions;
 
-import java.util.Iterator;
-import java.util.Set;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,7 +16,7 @@ public class searchSteps {
 	public SearchPage searchPage;
 	public String price1;
 	
-	TestContextSetup testContextSetup;
+	public TestContextSetup testContextSetup;
 	
 	
 	public searchSteps(TestContextSetup testContextSetup)
@@ -35,7 +28,6 @@ public class searchSteps {
 	
 	@Given("user is on greencart landing page")
 	public void user_is_on_greencart_landing_page() {
-		
 	    testContextSetup.genericUtils.MaximizeWindow();
 	    Assert.assertTrue(searchPage.GetDriverTitle().contains("GreenKart"));
 	}
@@ -170,7 +162,6 @@ public class searchSteps {
 		String Actual  = searchPage.validatepromecode();
 		Assert.assertEquals(Actual, Expected);
 	}
-	
 	
 }
 	

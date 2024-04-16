@@ -1,4 +1,3 @@
-@smoke1
 Feature: Order item functionality
 
   Scenario Outline: Validate order functionality
@@ -12,6 +11,3 @@ Feature: Order item functionality
   Examples:
   |term|
   |Tom |
- 
- 
- 

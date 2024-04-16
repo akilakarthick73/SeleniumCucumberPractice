@@ -10,7 +10,7 @@ Feature: Search functionality
       | term |
       | Tom  |
 
-  @smoke3
+   @regression
   Scenario: Check Cart
     Given user is on greencart landing page
     When the user click the cart button
@@ -87,16 +87,15 @@ Feature: Search functionality
 
 
 
-@smoke11
+	@smoke11
 	Scenario: Validate the alphabetically order
 	Given user is on greencart landing page
 	Then user searched same shortname in offers page
 	And the user validate alphabetically order
 
-@smoke12
+	@smoke12
 
-Scenario: Validate the Promo code 
-
+	Scenario: Validate the Promo code 
 		Given user is on greencart landing page
     When user search with short name <term> and extracted actual name
     And user change manuvally from 1 to 5
@@ -112,7 +111,7 @@ Scenario: Validate the Promo code
      Examples: 
       | term     |promocode|		MESSAGE				|
       | Cucumber |rahulshettyademy	|Invalid code ..!|
-
+ 
  
 
 

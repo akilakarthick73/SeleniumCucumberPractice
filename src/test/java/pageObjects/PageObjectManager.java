@@ -8,6 +8,7 @@ public class PageObjectManager {
 	public homePage hmpage;
 	public SearchPage searchPage;
 	public ordersPage orderPage;
+	public TopdealPage TopdealPage;
 	
 	public PageObjectManager(WebDriver driver)
 	{
@@ -32,4 +33,12 @@ public class PageObjectManager {
 		orderPage = new ordersPage(driver);
 		return orderPage;
 	}
-}
+	
+	public TopdealPage GetTopdealPage()
+	{
+		TopdealPage = new TopdealPage(driver);
+		return TopdealPage;
+	}
+} 
+
+

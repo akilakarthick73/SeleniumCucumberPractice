@@ -1,3 +1,4 @@
+stepDefinitions\TopdealSteps.class
 utils\TestContextSetup.class
 cucumberOptions\TestNGRunner.class
 stepDefinitions\homeSteps.class
@@ -6,6 +7,7 @@ utils\GenericUtils.class
 pageObjects\homePage.class
 stepDefinitions\searchSteps.class
 stepDefinitions\Hooks.class
+pageObjects\TopdealPage.class
 stepDefinitions\orderSteps.class
 utils\TestBase.class
 pageObjects\ordersPage.class

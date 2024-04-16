@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Surefire_suite">
+                    <div class="method-list-content failed suite-Surefire_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="cucumberOptions.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate the pagination&quot;, &quot;Search functionality&quot;)">runScenario("Validate the pagination", "Search functionality")</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="cucumberOptions.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify place order errormsg&quot;, &quot;Topdeal functionality&quot;)">runScenario("Verify place order errormsg", "Topdeal functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="cucumberOptions.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify place order functionality&quot;, &quot;Topdeal functionality&quot;)">runScenario("Verify place order functionality", "Topdeal functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="cucumberOptions.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Cart&quot;, &quot;Search functionality&quot;)">runScenario("Check Cart", "Search functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,24 +128,84 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">cucumberOptions.TestNGRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Validate the pagination&quot;, &quot;Search functionality&quot;)">
-                  </a> <!-- runScenario("Validate the pagination", "Search functionality") -->
+                  <a name="runScenario(&quot;Verify place order errormsg&quot;, &quot;Topdeal functionality&quot;)">
+                  </a> <!-- runScenario("Verify place order errormsg", "Topdeal functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Validate the pagination","Search functionality")</span>
+                  <span class="parameters">("Verify place order errormsg","Topdeal functionality")</span>
+                  <div class="stack-trace">java.lang.Error: Unresolved compilation problem: 
+	The method selectByVizasibleText(String) is undefined for the type Select
+
+	at pageObjects.TopdealPage.Selectcountry(TopdealPage.java:82)
+	at stepDefinitions.TopdealSteps.the_user_select_india_from_choose_country_drop_down(TopdealSteps.java:52)
+	at ✽.the user Select India from choose country drop down(file:///C:/Users/91888/eclipse-workspace/SeleniumCucumberPractice/src/test/java/features/Topdeal.feature:36)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify place order functionality&quot;, &quot;Topdeal functionality&quot;)">
+                  </a> <!-- runScenario("Verify place order functionality", "Topdeal functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify place order functionality","Topdeal functionality")</span>
+                  <div class="stack-trace">java.lang.Error: Unresolved compilation problem: 
+	The method selectByVizasibleText(String) is undefined for the type Select
+
+	at pageObjects.TopdealPage.Selectcountry(TopdealPage.java:82)
+	at stepDefinitions.TopdealSteps.the_user_select_india_from_choose_country_drop_down(TopdealSteps.java:52)
+	at ✽.the user Select India from choose country drop down(file:///C:/Users/91888/eclipse-workspace/SeleniumCucumberPractice/src/test/java/features/Topdeal.feature:18)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check Cart&quot;, &quot;Search functionality&quot;)">
+                  </a> <!-- runScenario("Check Cart", "Search functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check Cart","Search functionality")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.60)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [24509da498310f9621874a75fdd840e9, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.60, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\91888\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52799}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52799/devtoo..., se:cdpVersion: 123.0.6312.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 24509da498310f9621874a75fdd840e9
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1035)
+	at utils.GenericUtils.MaximizeWindow(GenericUtils.java:34)
+	at stepDefinitions.searchSteps.user_is_on_greencart_landing_page(searchSteps.java:31)
+	at ✽.user is on greencart landing page(file:///C:/Users/91888/eclipse-workspace/SeleniumCucumberPractice/src/test/java/features/search.feature:15)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -197,16 +267,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'cucumberOptions.TestNGRunner')
-data.setCell(0, 3, 6599);
+data.setCell(0, 3, 9619);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'cucumberOptions.TestNGRunner')
+data.setCell(1, 3, 6932);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'cucumberOptions.TestNGRunner')
+data.setCell(2, 3, 2900);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -234,16 +312,30 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">cucumberOptions.TestNGRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@2954f6ab)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@61a2aeb7)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Validate the pagination", "Search functionality")</span>
-                <span class="method-start">1618 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify place order functionality", "Topdeal functionality")</span>
+                <span class="method-start">1376 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify place order errormsg", "Topdeal functionality")</span>
+                <span class="method-start">11001 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check Cart", "Search functionality")</span>
+                <span class="method-start">17935 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">8222 ms</span>
+                <span class="method-start">20839 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
