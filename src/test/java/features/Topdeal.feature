@@ -55,7 +55,7 @@ And the user select the date
 Then user the select the today date 
 
 
-@regression
+@regression2
 Scenario: Validate the javascriptexecutor 
 
 Given user is on greencart landing page 
