@@ -41,7 +41,7 @@ Feature: Topdeal functionality
       | Beetroot |
 
 @regression
-	Scenario: Validate element colour
+	Scenario: Validate Backgroud colour
 	Given user is on greencart landing page 
 	Then user searched same shortname in offers page
 	And user validate the colour
