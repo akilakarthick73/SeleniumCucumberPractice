@@ -63,6 +63,13 @@ Scenario: Validate the javascriptexecutor
 
 Given user is on greencart landing page 
 Then user Scroll down 
+@regression9999
+
+ 
+Scenario:  the javascriptexecutor 
+
+Given user is on greencart landing page 
+Then user Scroll down 
 
 	
 
